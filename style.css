@@ -1,0 +1,101 @@
+/* دیزاینی سەرەکی پەیج */
+body {
+    font-family: 'Arial', Tahoma, sans-serif;
+    background-color: #f4f4f9; 
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    direction: rtl; 
+}
+
+/* -------------------- ١. شێوازی Splash Screen و پاشخانی لۆگۆ -------------------- */
+
+#splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* ****************************************************** */
+    /* دانانی وێنەی لۆگۆکە وەک پاشخان (Background) */
+    background-image: url('pshtiwan-logo.jpg'); 
+    background-color: #ffffff; /* ڕەنگی پاشخان لە کاتی بارکردن (ڕەشی تێر) */
+    background-size: 55%; /* قەبارەی لۆگۆکە لە ناوەڕاستی شاشەکە */
+    background-repeat: no-repeat; 
+    background-position: center; 
+    /* ****************************************************** */
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; 
+    padding-bottom: 50px;
+    z-index: 9999; 
+    opacity: 1;
+    transition: opacity 0.5s ease-out; 
+}
+
+.loading-text {
+    color: #ffffff; 
+    font-size: 1.2em;
+    opacity: 0.8;
+}
+
+
+/* -------------------- ٢. شێوازی ناوەڕۆکی سەرەکی و دوگمە مۆدێرنەکان -------------------- */
+
+header {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    border-bottom: 3px solid #0099ff; 
+}
+
+.social-links {
+    padding: 40px 20px;
+}
+
+.buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    padding: 15px 35px;
+    border-radius: 30px; 
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-width: 180px; 
+}
+
+.social-btn img {
+    width: 20px; 
+    height: 20px;
+    margin-left: 10px; 
+}
+
+.social-btn:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* ڕەنگی پلاتفۆرمەکان */
+.whatsapp { background-color: #25D366; }
+.facebook { background-color: #1877F2; }
+.telegram { background-color: #0088CC; }
+.tiktok { background-color: #000000; }
+
+footer {
+    padding: 20px;
+    background-color: #000000;
+    color: #fff;
+    margin-top: 40px;
+}
