@@ -15,7 +15,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('pshtiwan-logo.png');
+  background-image: url('pshtiwan-logo.jpg');
   background-color: #fff;
   background-size: 55%;
   background-repeat: no-repeat;
@@ -123,3 +123,4 @@ footer {
   padding: 20px;
   margin-top: 40px;
 }
+
