@@ -1,54 +1,80 @@
 <!DOCTYPE html>
 <html lang="ku" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pshtiwan Group | ماڵپەڕی فەرمی</title>
-    <link rel="stylesheet" href="style.css"> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pshtiwan Group | ماڵپەڕی فەرمی</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div id="splash-screen">
-        <img src="logo.png" alt="" class="logo-animation">
-    </div>
-    <div id="main-content" style="display: none;">
-        
-        <header>
-            <h1>بەخێربێن بۆ Pshtiwan Group</h1>
-            <p>کارەکەت بە پشتیوان گرووپ  بسپێرە</p>
-            <p>لێرەوە دەتوانیت بگەی بە هەموو پلاتفۆرمە کۆمەڵایەتییەکانمان.</p>
-        </header>
+  <!-- Splash Screen -->
+  <div id="splash-screen"></div>
 
-        <section class="social-links">
-            <h2>پەیوەندیمان پێوە بکە</h2>
-            
-            <div class="buttons-container">
-                <a href="https://wa.me/9647501122028 " class="social-btn whatsapp">
-                    <img src="whatsapp-icon.png" alt="WhatsApp Icon"> WhatsApp
-                </a>
-                <a href="https://www.facebook.com/share/1DXyuTHjwJ/" class="social-btn facebook">
-                    <img src="facebook-icon.png" alt="Facebook Icon"> Facebook
-                </a>
-                <a href="https://t.me/+9647501122028" class="social-btn telegram">
-                    <img src="telegram-icon.png" alt="Telegram Icon"> Telegram
-                </a>
-                <a href="https://www.tiktok.com/@pshtewan.karabach?_r=1&_t=ZS-91s1XGXg7AA" class="social-btn tiktok">
-                    <img src="tiktok-icon.png" alt="TikTok Icon"> TikTok
-                </a>
-                </a>
-                <a href="https://www.instagram.com/pshtiwan.group?igsh=MWI4NXBkbzNzZGxhMg==" class="social-btn instagram">
-                    <img src="instagram-icon.png" alt="instagram Icon"> instagram
-                </a>
-            </div>
-            
-        </section>
+  <!-- Main Content -->
+  <div id="main-content" style="display:none;">
 
-        <footer>
-            <p>&copy;هەموو مافەکانی پارێزراوە   Pshtiwan Group</p>
-        </footer>
+    <header class="site-header">
+      <img src="pshtiwan.1.png" alt="Pshtiwan Group Logo" class="header-logo">
+      <h1>بەخێربێن بۆ Pshtiwan Group</h1>
+      <p>شۆڕشێک لە خزمەت گوزاری پڕۆژە گەورەکاندا</p>
+      <p>لێرەوە دەتوانیت بگەی بە هەموو پلاتفۆرمە کۆمەڵایەتییەکانمان.</p>
+    </header>
 
-    </div>
+    <section class="social-links">
+      <h2>پەیوەندیمان پێوە بکە</h2>
 
-    <script src="script.js"></script> 
+      <div class="buttons-container">
+        <a href="https://wa.me/9647501122028" class="social-btn whatsapp">
+          <img src="whatsapp-icon.png"> WhatsApp
+        </a>
+
+        <a href="https://www.facebook.com/share/1DXyuTHjwJ/" class="social-btn facebook">
+          <img src="facebook-icon.png"> Facebook
+        </a>
+
+        <a href="https://t.me/+9647501122028" class="social-btn telegram">
+          <img src="telegram-icon.png"> Telegram
+        </a>
+
+        <a href="https://www.tiktok.com/@pshtewan.karabach" class="social-btn tiktok">
+          <img src="tiktok-icon.png"> TikTok
+        </a>
+
+        <a href="https://www.instagram.com/pshtiwan.group" class="social-btn instagram">
+          <img src="instagram-icon.png"> Instagram
+        </a>
+      </div>
+
+   <!-- Mobile Numbers centered -->
+<div class="mobile-numbers-center">
+  <h3>ژمارەی مۆبایل</h3>
+  <p>📱 <a href="tel:+9647501122028">+964 750 112 2028</a></p>
+  <p>📱 <a href="tel:+9647700387272">+964 770 038 7272</a></p>
+</div>
+
+    </section>
+
+    <footer>
+      <p>&copy; هەموو مافەکانی پارێزراوە - Pshtiwan Group</p>
+    </footer>
+
+  </div>
+
+  <script>
+    window.addEventListener('load', () => {
+      const splash = document.getElementById('splash-screen');
+      const main = document.getElementById('main-content');
+
+      setTimeout(() => {
+        splash.style.opacity = '0';
+        setTimeout(() => {
+          splash.style.display = 'none';
+          main.style.display = 'block';
+        }, 500);
+      }, 2000);
+    });
+  </script>
+
 </body>
 </html>
