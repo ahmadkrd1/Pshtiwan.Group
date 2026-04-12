@@ -1,87 +1,228 @@
 <!DOCTYPE html>
-<html lang="ku" dir="rtl">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pshtiwan Group | ماڵپەڕی فەرمی</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ahmad.Mohammed | Social Links</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI',sans-serif;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  min-height:100vh;
+  color:#fff;
+  overflow-x:hidden;
+  overflow-y:auto;
+  background:#020617;
+}
+
+/* Canvas */
+#particles{
+  position:fixed;
+  inset:0;
+  z-index:-1;
+}
+
+/* Splash */
+#splash{
+  position:fixed;
+  inset:0;
+  background:rgba(2,6,23,0.9);
+  backdrop-filter:blur(20px);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+  transition:0.5s;
+}
+
+#splash .logo{
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(255,255,255,0.08);
+  box-shadow:0 0 40px rgba(0,255,255,0.25);
+  animation:float 2.5s infinite ease-in-out;
+}
+
+#splash img{
+  width:85px;
+  height:85px;
+  border-radius:50%;
+}
+
+@keyframes float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-10px)}
+}
+
+/* Header */
+header{
+  text-align:center;
+  padding:50px 20px 20px;
+}
+
+header img{
+  width:110px;
+  height:110px;
+  border-radius:50%;
+  border:3px solid rgba(255,255,255,0.4);
+  margin-bottom:10px;
+}
+
+header h1{
+  font-size:22px;
+}
+
+/* Links */
+.links{
+  max-width:420px;
+  margin:auto;
+  padding:20px;
+  display:grid;
+  gap:15px;
+}
+
+.link{
+  text-decoration:none;
+  padding:15px;
+  border-radius:18px;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  font-size:16px;
+  font-weight:600;
+  color:#fff;
+  backdrop-filter:blur(10px);
+  box-shadow:0 10px 25px rgba(0,0,0,0.35);
+  transition:0.3s;
+}
+
+.link i{
+  font-size:20px;
+  width:26px;
+  text-align:center;
+}
+
+.link:hover{
+  transform:translateY(-4px) scale(1.03);
+  filter:brightness(1.1);
+}
+
+/* Colors */
+.whatsapp{background:linear-gradient(135deg,#25D366,#128C7E)}
+.facebook{background:linear-gradient(135deg,#1877f2,#0f5bd8)}
+.telegram{background:linear-gradient(135deg,#2AABEE,#229ED9)}
+.instagram{background:linear-gradient(135deg,#f58529,#dd2a7b,#8134af)}
+.tiktok{background:linear-gradient(135deg,#000,#ff0050)}
+.snapchat{background:linear-gradient(135deg,#FFFC00,#F7D400);color:#000}
+.phone{background:linear-gradient(135deg,#16a34a,#22c55e)}
+.location{background:linear-gradient(135deg,#16a34a,#22c55e)}
+
+/* Footer */
+footer{
+  text-align:center;
+  padding:25px;
+  font-size:14px;
+  opacity:0.6;
+}
+</style>
 </head>
+
 <body>
 
-  <!-- Splash Screen -->
-  <div id="splash-screen"></div>
+<canvas id="particles"></canvas>
 
-  <!-- Main Content -->
-  <div id="main-content" style="display:none;">
-
-    <header class="site-header">
-      <img src="pshtiwan.1.png" alt="Pshtiwan Group Logo" class="header-logo">
-      <h1>بەخێربێن بۆ Pshtiwan Group</h1>
-      <p>شۆڕشێک لە خزمەت گوزاری پڕۆژە گەورەکاندا</p>
-      <p>بۆیە کارەکەت بە پشتیوان گرووپ بسپێرە</p>
-
-      
-      <p>لێرەوە دەتوانیت بگەی بە هەموو پلاتفۆرمە کۆمەڵایەتییەکانمان.</p>
-    </header>
-
-    <section class="social-links">
-      <h2>پەیوەندیمان پێوە بکە</h2>
-
-      <div class="buttons-container">
-        <a href="https://wa.me/9647501122028" class="social-btn whatsapp">
-          <img src="whatsapp-icon.png"> WhatsApp
-        </a>
-
-        <a href="https://www.facebook.com/share/1DXyuTHjwJ/" class="social-btn facebook">
-          <img src="facebook-icon.png"> Facebook
-        </a>
-
-        <a href="https://t.me/+9647501122028" class="social-btn telegram">
-          <img src="telegram-icon.png"> Telegram
-        </a>
-
-        <a href="https://www.tiktok.com/@pshtewan.karabach" class="social-btn tiktok">
-          <img src="tiktok-icon.png"> TikTok
-        </a>
-
-        <a href="https://www.instagram.com/pshtiwan.group" class="social-btn instagram">
-          <img src="instagram-icon.png"> Instagram
-        </a>
-      </div>
-
-   <!-- Mobile Numbers centered -->
-<div class="mobile-numbers-center">
-  <h3>ژمارەی مۆبایل</h3>
-  <p>📱 <a href="tel:+9647501122028">+964 750 112 2028</a></p>
-  <p>📱 <a href="tel:+9647700387272">+964 770 038 7272</a></p>
+<div id="splash">
+  <div class="logo">
+    <img src="pshtiwan.group.png">
+  </div>
 </div>
 
-    </section>
+<header>
+  <img src="pshtiwan.group1.png">
+  <h1>Pshtiwan.Group</h1>
+</header>
 
-    <footer>
-      <p>&copy; هەموو مافەکانی پارێزراوە - Pshtiwan Group</p>
-    </footer>
+<section class="links">
+  <a class="link facebook" href="https://www.facebook.com/share/1BSmQUXsas/?mibextid=wwXIfr"><i class="fab fa-facebook"></i> Facebook</a>
+  <a class="link telegram" href="https://t.me/+9647501122028"><i class="fab fa-telegram"></i> Telegram</a>
+  <a class="link instagram" href="https://www.instagram.com/pshtiwan.group?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fab fa-instagram"></i> Instagram</a>
+  <a class="link tiktok" href="https://www.tiktok.com/@pshtewan.group?is_from_webapp=1&sender_device=pc"><i class="fab fa-tiktok"></i> TikTok</a>
+  <a class="link whatsapp" href="https://wa.me/9647501122028"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+  <a class="link phone" href="tel:+9647501122028"><i class="fas fa-phone"></i> call 1</a>
+  <a class="link phone" href="tel:+9647500387272"><i class="fas fa-phone"></i> Call 2</a>
+</section>
 
-  </div>
+<footer>© Pshtiwan.Group</footer>
 
-  <script>
-    window.addEventListener('load', () => {
-      const splash = document.getElementById('splash-screen');
-      const main = document.getElementById('main-content');
+<script>
+// Splash
+setTimeout(()=>{
+  document.getElementById('splash').style.opacity='0';
+  setTimeout(()=>{
+    document.getElementById('splash').style.display='none'
+  },500);
+},2000);
 
-      setTimeout(() => {
-        splash.style.opacity = '0';
-        setTimeout(() => {
-          splash.style.display = 'none';
-          main.style.display = 'block';
-        }, 500);
-      }, 2000);
-    });
-  </script>
+// Particles
+const canvas=document.getElementById('particles');
+const ctx=canvas.getContext('2d');
+
+let w=canvas.width=window.innerWidth;
+let h=canvas.height=window.innerHeight;
+
+window.addEventListener('resize',()=>{
+  w=canvas.width=window.innerWidth;
+  h=canvas.height=window.innerHeight;
+});
+
+let particles=[];
+
+for(let i=0;i<80;i++){
+  particles.push({
+    x:Math.random()*w,
+    y:Math.random()*h,
+    r:Math.random()*2+1,
+    dx:(Math.random()-0.5),
+    dy:(Math.random()-0.5)
+  });
+}
+
+function animate(){
+  ctx.clearRect(0,0,w,h);
+
+  particles.forEach(p=>{
+    p.x+=p.dx;
+    p.y+=p.dy;
+
+    if(p.x<0||p.x>w)p.dx*=-1;
+    if(p.y<0||p.y>h)p.dy*=-1;
+
+    ctx.beginPath();
+    ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+    ctx.fillStyle="white";
+    ctx.fill();
+  });
+
+  requestAnimationFrame(animate);
+}
+animate();
+</script>
 
 </body>
 </html>
-
-
-
-
